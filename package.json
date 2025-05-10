@@ -1,0 +1,12 @@
+{
+  "name": "dauraksi",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Hizkia Albert Arundaa",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "daisyui": "^5.0.35",
+    "tailwindcss": "^4.1.6"
+  }
+}
