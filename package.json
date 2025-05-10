@@ -4,6 +4,10 @@
   "keywords": [],
   "author": "Hizkia Albert Arundaa",
   "license": "ISC",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./public/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./public/css/tailwind.css --minify"
+  },
   "description": "",
   "dependencies": {
     "daisyui": "^5.0.35",
