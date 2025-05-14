@@ -1,0 +1,26 @@
+#layanan-form {
+	position: relative; /* To enable absolute positioning of the overlay */
+	background: url("/dauraksi/public/layanan.jpeg");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 0; /* Base layer */
+}
+
+#layanan-form::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+	z-index: 1;
+	pointer-events: none; /* Allow clicks through the overlay */
+}
+
+/* Optional: make sure content inside the form is above the overlay */
+#layanan-form > * {
+	position: relative;
+	z-index: 2;
+}

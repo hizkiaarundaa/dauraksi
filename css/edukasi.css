@@ -1,0 +1,18 @@
+/* Untuk browser berbasis Webkit (Chrome, Edge, Safari) */
+.scrollbar-green::-webkit-scrollbar {
+	width: 1.5rem;
+	background: #e5fbe5; /* warna background scrollbar track */
+}
+.scrollbar-green::-webkit-scrollbar-thumb {
+	background: #22c55e; /* warna hijau (Tailwind green-500) */
+	border-radius: 8px;
+}
+.scrollbar-green::-webkit-scrollbar-thumb:hover {
+	background: #16a34a; /* warna hijau lebih gelap saat hover (Tailwind green-600) */
+}
+
+/* Untuk Firefox */
+.scrollbar-green {
+	scrollbar-width: 1rem;
+	scrollbar-color: #fcb700 #e5fbe5;
+}

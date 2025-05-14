@@ -2,5 +2,9 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: /dauraksi/index.php");
-exit();
+?>
+<script>
+  alert("Anda telah berhasil keluar");
+  // Redirect to the homepage or login page
+  window.location.href = "/dauraksi/";
+</script>

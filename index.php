@@ -37,9 +37,10 @@ if ($isLoggedIn && isset($_SESSION['welcome'])) {
     </nav>
     <div id="auth_act" class="flex justify-end items-center w-40 gap-4 max-w-40">
       <?php if ($isLoggedIn): ?>
-        <div className="avatar">
-          <div class="lg:w-14 xl:w-16 rounded-full border border-warning overflow-hidden">
-            <img src="public/avatar-default.jpeg" alt="Avatar" />
+        <div class="avatar">
+          <div
+            class="w-16 rounded-full border border-warning overflow-hidden cursor-pointer hover:scale-125 transition-all ease-in-out duration-300">
+            <img src="/dauraksi/public/avatar-default.jpeg" alt="Avatar" id="avatar" />
           </div>
         </div>
         <form action="/dauraksi/auth/logout.php" method="post" style="display: inline;">
@@ -74,13 +75,18 @@ if ($isLoggedIn && isset($_SESSION['welcome'])) {
           </div>
           <div id="hero_act" class="flex items-center justify-center gap-5">
             <?php if (!$isLoggedIn): ?>
-              <button id="login" onclick="handleLogin()"
+              <button id="login" onclick="handleRegister()"
                 class="transition-all duration-300 ease-in-out btn btn-lg btn-warning hover:scale-110 hover:text-white">Gabung
                 Sekarang</button>
             <?php endif; ?>
             <button id="komunitas"
-              class="transition-all duration-300 ease-in-out btn btn-lg btn-warning hover:scale-110 hover:text-white">Komunitas
-              DaurAksi</button>
+              class="group transition-all duration-300 ease-in-out btn btn-lg btn-warning hover:scale-110 flex items-center justify-center hover:text-white"
+              onclick="handleCommunity()">
+              <i
+                class="fa-brands fa-discord text-white group-hover:text-[#4654C0]  outline outline-white rounded-full p-2 transition-colors duration-300 mr-2 leading-none text-xl">
+              </i>
+              Komunitas DaurAksi
+            </button>
           </div>
         </div>
       </div>
@@ -88,8 +94,8 @@ if ($isLoggedIn && isset($_SESSION['welcome'])) {
   </main>
   <footer id="footer" class="flex items-center justify-center w-full h-12 text-center text-white bg-green-700 -z-10">
     &copy; DaurAksi. <span id="year"></span></footer>
-</body>
-<script src="js/index.js"></script>
 
+  <script src="js/index.js" defer></script>
+</body>
 
 </html>

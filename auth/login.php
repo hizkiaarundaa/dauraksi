@@ -17,7 +17,6 @@
       <?php
       include("db.php");
 
-
       if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"])) {
         $username = mysqli_real_escape_string($con, $_POST["username"]);
         $password = $_POST["password"];
@@ -33,6 +32,7 @@
             $_SESSION["user_id"] = $user["id"];
             $_SESSION["welcome"] = $user["username"];
             echo "<script>
+                    window.opener.location.href = '/dauraksi/'
                     window.opener.location.reload();
                     window.close();
                   </script>";
@@ -47,9 +47,9 @@
       ?>
       <form class="flex flex-col" action="login.php" method="post">
         <input placeholder="Username" type="text" name="username" required autocomplete="off"
-          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4">
+          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700 transition ease-in-out duration-150">
         <input placeholder="Password" name="password" type="password" required autocomplete="off"
-          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4">
+          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700 transition ease-in-out duration-150">
         <div class="flex items-center justify-between">
           <a href="/dauraksi/auth/forget.password.php" class="text-sm text-green-300 hover:underline">Lupa Password?</a>
           <a href="/dauraksi/auth/register.php" class="text-sm text-green-300 hover:underline">Belum punya akun?</a>

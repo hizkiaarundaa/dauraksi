@@ -1,16 +1,16 @@
 {
-  "name": "dauraksi",
-  "version": "1.0.0",
-  "keywords": [],
-  "author": "Hizkia Albert Arundaa",
-  "license": "ISC",
-  "scripts": {
-    "dev": "tailwindcss -i ./src/input.css -o ./public/css/tailwind.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./public/css/tailwind.css --minify"
-  },
-  "description": "",
-  "dependencies": {
-    "daisyui": "^5.0.35",
-    "tailwindcss": "^4.1.6"
-  }
+	"name": "dauraksi",
+	"version": "1.0.0",
+	"keywords": [],
+	"author": "Hizkia Albert Arundaa",
+	"license": "ISC",
+	"scripts": {
+		"dev": "tailwindcss -i ./src/input.css -o ./css/style.css --watch && echo 'http://localhost/dauraksi/'",
+		"build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify"
+	},
+	"description": "website dauraksi",
+	"dependencies": {
+		"daisyui": "^5.0.35",
+		"tailwindcss": "^4.1.6"
+	}
 }
