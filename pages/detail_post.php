@@ -33,6 +33,7 @@ $post = $result->fetch_assoc();
   <link rel="shortcut icon" href="/dauraksi/public/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="/dauraksi/css/style.css" />
   <link rel="stylesheet" href="/dauraksi/css/edukasi.css">
+  <script src="https://kit.fontawesome.com/c5596080ef.js" crossorigin="anonymous"></script>
 </head>
 
 <body
@@ -52,7 +53,7 @@ $post = $result->fetch_assoc();
     <div class="flex justify-end items-center">
       <a href="/dauraksi/pages/edukasi.php"
         class="inline-block transition-all duration-300 ease-in-out btn  btn-warning hover:scale-110 hover:warning hover:bg-green-600 text-white font-medium px-6 py-2 rounded-full shadow-md">
-        ← Kembali ke Edukasi
+        <i class="fa-solid fa-arrow-left"></i> Kembali ke Edukasi
       </a>
     </div>
   </main>
